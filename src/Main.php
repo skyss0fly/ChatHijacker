@@ -15,7 +15,8 @@ $this->savedefaultconfig();
 }
 
 public function onCommand(CommandSender $sender, string $bool, array $args): bool {
-$message = $thisx>getConfig()->get("Message");
+$message = $this->getConfig()->get("Message");
+
 }
 
 }
