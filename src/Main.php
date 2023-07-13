@@ -7,6 +7,7 @@ use pocketmine\player\Player;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\event\Listener;
+use pocketmine\event\player\PlayerChatEvent;
 
 class Main extends PluginBase implements Listener {
 
@@ -31,8 +32,10 @@ $value->file_set_contents("True");
 }
 
   
-public Function hijack(){
-  
+public function onChat(PlayerChatEvent $event) {
+        $player = $event->getPlayer();
+        $message = $event->getMessage();
+
 }
 
 }
