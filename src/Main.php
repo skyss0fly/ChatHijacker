@@ -16,7 +16,23 @@ $this->savedefaultconfig();
 
 public function onCommand(CommandSender $sender, string $bool, array $args): bool {
 $message = $this->getConfig()->get("Message");
+$value = $this->getConfig()->get("Enabled");
+  if ($value) {
+  $value->file_set_contents("False");
+  $sender->sendMessage("Disabled ChatHijacker");
+  
+}
+  else {
+$value->file_set_contents("True");
+  $sender->sendMessage("Enabled ChatHijacker");
+  
+  }
+  
+}
 
+  
+public Function hijack(){
+  
 }
 
 }
