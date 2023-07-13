@@ -36,9 +36,16 @@ public function onChat(PlayerChatEvent $event) {
         $player = $event->getPlayer();
         $message = $event->getMessage();
   $lol = $this->getConfig()->get("Message");
+    $l = $this->getConfig()->get("Enabled");
+  if($l) {
        $hijacked_message = str_replace($lol, $message);
                         $event->setMessage($hijacked_message);
 
+}
+  else{
+case: "none"
+  // nothing lol
+  }
 }
 
 }
