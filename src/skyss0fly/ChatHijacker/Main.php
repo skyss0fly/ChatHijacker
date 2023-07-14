@@ -15,7 +15,7 @@ public function onLoad(): void {
 $this->savedefaultconfig();
 }
 
-public function onCommand(CommandSender $sender, string $bool, array $args): bool {
+public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool;
   switch ($command->getName()) {
             case "hijack":
 $message = $this->getConfig()->get("Message");
