@@ -21,12 +21,12 @@ public function onCommand(CommandSender $sender, Command $command, string $label
 $message = $this->getConfig()->get("Message");
 $value = $this->getConfig()->get("Enabled");
   if ($value) {
-  $value->set("False");
+  $value->file_put_contents("False");
   $sender->sendMessage("Disabled ChatHijacker");
   
 }
   else {
-$value->set("True");
+$value->file_put_contents("True");
   $sender->sendMessage("Enabled ChatHijacker");
   
   }
