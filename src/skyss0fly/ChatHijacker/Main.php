@@ -15,7 +15,7 @@ public function onLoad(): void {
 $this->savedefaultconfig();
 }
   public function onEnable(): void {
-$this->getServer()->getPluginManager()->registerEvents($this, $this);
+$this->getServer()->getPluginManager()->registerEvents(new chatListener(), $this);
   }
 
 public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool {
