@@ -10,15 +10,13 @@ use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerChatEvent;
 
 class Main extends PluginBase implements Listener {
-/** @var Config */
-    private $config;
 
 public function onLoad(): void {
 $this->savedefaultconfig();
 }
   public function onEnable(): void {
 $this->getServer()->getPluginManager()->registerEvents($this, $this);
-     $this->config = $this->getConfig();
+
     
   }
 
@@ -60,11 +58,11 @@ public function onChat(PlayerChatEvent $event) {
   }
 }
  public function settrue(): void {
-   $this->config->set("Enabled", true);
-        $this->config->save();
+   $this->getConfig()->set("Enabled", true);
+        $this->getConfig()->save();
     }
   public function setfalse(): void {
-    $this->config->set("Enabled", False);
-        $this->config->save();
+    $this->getConfig()->set("Enabled", False);
+        $this->getConfig()->save();
   }
 }
