@@ -21,17 +21,18 @@ public function onCommand(CommandSender $sender, string $bool, array $args): boo
 $message = $this->getConfig()->get("Message");
 $value = $this->getConfig()->get("Enabled");
   if ($value) {
-  $value->getConfig()->set("False");
+  $value->set("False");
   $sender->sendMessage("Disabled ChatHijacker");
   
 }
   else {
-$value->getConfig()->set("True");
+$value->set("True");
   $sender->sendMessage("Enabled ChatHijacker");
   
   }
   
 }
+  return true;
 }
 
   
