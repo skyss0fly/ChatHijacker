@@ -41,6 +41,7 @@ public function onChat(PlayerChatEvent $event) {
         $chat = $event->getMessage();
   $lol = $this->getConfig()->get("Message");
     $l = $this->getConfig()->get("Enabled");
+  
   if($l) {
        $hijacked_message = str_replace($lol,"", $chat);
                         $event->setMessage($hijacked_message);
@@ -53,10 +54,10 @@ public function onChat(PlayerChatEvent $event) {
 }
  public function settrue(): void {
 $value = $this->getConfig()->get("Enabled");
-  $value->set("True");
+  $value->file_put_contents("True");
     }
   public function setfalse(): void {
 $value = $this->getConfig()->get("Enabled");
-    $value->set("False");
+    $value->file_put_contents("False");
   }
 }
