@@ -14,6 +14,9 @@ class Main extends PluginBase implements Listener {
 public function onLoad(): void {
 $this->savedefaultconfig();
 }
+  public function onEnable(): void {
+$this->getServer()->getPluginManager()->registerEvents($this, $this);
+  }
 
 public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool {
   switch ($command->getName()) {
