@@ -32,6 +32,7 @@ $value->file_set_contents("True");
   }
   
 }
+}
 
   
 public function onChat(PlayerChatEvent $event) {
