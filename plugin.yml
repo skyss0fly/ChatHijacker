@@ -1,0 +1,15 @@
+name: ChatHijacker
+main: skyss0fly\ChatHijacker\Main
+version: 1.0
+api: 5.0.0
+author: skyss0fly
+description: A simple hijacking plugin
+permissions:
+  ChatHijacker.use:
+    default: op
+commands:
+  hijack:
+    description: use this to make them suffer chatting
+    permission: ChatHijacker.use
+    default: false
+  
