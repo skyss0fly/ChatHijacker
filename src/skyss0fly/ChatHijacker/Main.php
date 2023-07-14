@@ -16,6 +16,8 @@ $this->savedefaultconfig();
 }
 
 public function onCommand(CommandSender $sender, string $bool, array $args): bool {
+  switch ($command->getName()) {
+            case "hijack":
 $message = $this->getConfig()->get("Message");
 $value = $this->getConfig()->get("Enabled");
   if ($value) {
@@ -42,8 +44,8 @@ public function onChat(PlayerChatEvent $event) {
                         $event->setMessage($hijacked_message);
 
 }
-  else{
-case: "none"
+  else {
+
   // nothing lol
   }
 }
