@@ -21,12 +21,12 @@ public function onCommand(CommandSender $sender, Command $command, string $label
 $message = $this->getConfig()->get("Message");
 $value = $this->getConfig()->get("Enabled");
   if ($value) {
-  $this->false();
+  $this->setfalse();
   $sender->sendMessage("Disabled ChatHijacker");
   
 }
   else {
-$this->true();
+$this->settrue();
   $sender->sendMessage("Enabled ChatHijacker");
   
   }
@@ -50,14 +50,13 @@ public function onChat(PlayerChatEvent $event) {
 
   // nothing lol
   }
-  public function true() {
+}
+ public function settrue(): void {
 $value = $this->getConfig()->get("Enabled");
-    $velue->set("True");
+  $value->set("True");
     }
-  public function false() {
+  public function setfalse(): void {
 $value = $this->getConfig()->get("Enabled");
     $value->set("False");
-    }
-}
-
+  }
 }
