@@ -21,12 +21,12 @@ public function onCommand(CommandSender $sender, string $bool, array $args): boo
 $message = $this->getConfig()->get("Message");
 $value = $this->getConfig()->get("Enabled");
   if ($value) {
-  $value->file_set_contents("False");
+  $value->getConfig()->set("False");
   $sender->sendMessage("Disabled ChatHijacker");
   
 }
   else {
-$value->file_set_contents("True");
+$value->getConfig()->set("True");
   $sender->sendMessage("Enabled ChatHijacker");
   
   }
@@ -37,11 +37,11 @@ $value->file_set_contents("True");
   
 public function onChat(PlayerChatEvent $event) {
         $player = $event->getPlayer();
-        $message = $event->getMessage();
+        $chat = $event->getMessage();
   $lol = $this->getConfig()->get("Message");
     $l = $this->getConfig()->get("Enabled");
   if($l) {
-       $hijacked_message = str_replace($lol, $message);
+       $hijacked_message = str_replace($word, $lol, $chat);
                         $event->setMessage($hijacked_message);
 
 }
