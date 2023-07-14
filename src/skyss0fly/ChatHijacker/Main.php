@@ -56,11 +56,13 @@ public function onChat(PlayerChatEvent $event) {
   }
 }
  public function settrue(): void {
-$value = $this->getConfig()->set("Enabled", True);
+   $cofnig = $this->getConfig();
+$config->getConfig()->set("Enabled", True);
 $this->getConfig()->save();
     }
   public function setfalse(): void {
-$value = $this->getConfig()->set("Enabled", False);
+    $config = $this->getConfig();
+$config->set("Enabled", False);
 $this->getConfig()->save();
   }
 }
