@@ -46,15 +46,20 @@ public function onChat(PlayerChatEvent $event) {
         $chat = $event->getMessage();
   $lol = $this->getConfig()->get("Message");
     $l = $this->getConfig()->get("Enabled");
-  
+  if ($player->hasPermission("ChatHijacker.bypasser")) {
+      // nothing
+      }
+      else{
   if($l) {
       
                         $event->setMessage($lol);
 
 }
+
   else {
 
   // nothing lol
+  }
   }
 }
  public function settrue(): void {
