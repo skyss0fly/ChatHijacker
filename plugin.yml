@@ -8,7 +8,7 @@ permissions:
   ChatHijacker.use:
     default: op
   ChatHijacker.bypass:
-  default: op
+    default: op
 commands:
   hijack:
     description: use this to make them suffer chatting
